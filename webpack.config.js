@@ -1,3 +1,6 @@
+const webpack = require('webpack')
+const dotenv = require('dotenv')
+
 module.exports = {
   mode: 'development',
   entry: [
@@ -13,6 +16,13 @@ module.exports = {
     contentBase: "./public",
     hot: true
 },
+plugins: [
+  // ...
+  new webpack.DefinePlugin({
+     'process.env': JSON.stringify(dotenv.config().parsed) // it will automatically pick up key values from .env file
+  })
+  // ...
+],
   devtool: 'source-map',
   module: {
     rules: [
@@ -24,7 +34,14 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
-      }
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: 'file-loader',
+        options: {
+          name: 'public/[name].[ext]'
+        }
+    }
     ]
   }
 }

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Photo } from "./Photo";
-import { apiKey } from "../../secrets";
+// import { apiKey } from "../../secrets";
 
 export const Scroll = () => {
   const [photos, setPhotos] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
+
+  const apiKey = process.env.API_KEY
 
   const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=10`;
 
@@ -47,6 +49,7 @@ export const Scroll = () => {
 
   useEffect(() => {
     console.log('in useEffect getPhotos')
+    console.log(process.env.NODE_ENV)
     getPhotos();
   }, []);
 
