@@ -39,6 +39,7 @@ plugins: [
     //       name: 'public/[name].[ext]'
     //     }
     // }
+    //
     ]
   }
 }
