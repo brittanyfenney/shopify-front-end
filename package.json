@@ -28,8 +28,8 @@
   "scripts": {
     "web": "webpack",
     "dev": "webpack -w",
-    "start": "webpack serve",
-    "start-dev": "npm run dev & npm run start"
+    "start-serve": "webpack serve",
+    "start-dev": "npm run dev & npm run start-serve"
   },
   "repository": {
     "type": "git",
