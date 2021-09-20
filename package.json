@@ -28,7 +28,7 @@
   "scripts": {
     "web": "webpack",
     "dev": "webpack -w",
-    "start": "node index.js",
+    "start": "node ./client/index.js",
     "serve": "webpack serve",
     "start-dev": "npm run dev & npm run serve"
   },
