@@ -5,31 +5,32 @@
   "main": "index.js",
   "dependencies": {
     "@babel/core": "^7.15.5",
-    "@babel/plugin-transform-runtime": "^7.15.0",
-    "@babel/preset-env": "^7.15.6",
-    "@babel/preset-react": "^7.14.5",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.2.2",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "css-loader": "^6.3.0",
-    "dotenv": "^10.0.0",
+    "babel-core": "^7.0.0-0",
     "file-loader": "^6.2.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "style-loader": "^3.2.1",
-    "webpack": "^5.53.0",
-    "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.2.1"
+    "react-dom": "^17.0.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    // "@babel/plugin-transform-runtime": "^7.13.15",
+    // "@babel/preset-env": "^7.13.15",
+    // "@babel/preset-react": "^7.13.13",
+    // "babel-loader": "^7.1.5",
+    // "babel-polyfill": "^6.26.0",
+    // "babel-preset-es2015": "^6.24.1",
+    // "babel-preset-stage-0": "^6.24.1",
+    // "css-loader": "^5.2.1",
+    // "dotenv": "^10.0.0",
+    // "style-loader": "^2.0.0",
+    // "webpack": "^5.53.0",
+    // "webpack-cli": "^4.8.0",
+    // "webpack-dev-server": "^3.11.2"
+  },
   "scripts": {
     "web": "webpack",
     "dev": "webpack -w",
     "start": "node server",
-    "serve": "webpack serve",
-    "start-dev": "npm run dev & npm run serve"
+    "start-serve": "webpack serve",
+    "start-dev": "npm run dev & npm run start-serve"
   },
   "repository": {
     "type": "git",

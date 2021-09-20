@@ -12,16 +12,13 @@ module.exports = {
     filename: './public/bundle.js'
   },
   devServer: {
-    publicPath: "/",
-    contentBase: "./public",
+    static: "./public",
     hot: true
 },
 plugins: [
-  // ...
   new webpack.DefinePlugin({
-     'process.env': JSON.stringify(dotenv.config().parsed) // it will automatically pick up key values from .env file
+     'process.env': JSON.stringify(dotenv.config().parsed)
   })
-  // ...
 ],
   devtool: 'source-map',
   module: {
@@ -35,13 +32,13 @@ plugins: [
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
-      {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        loader: 'file-loader',
-        options: {
-          name: 'public/[name].[ext]'
-        }
-    }
+    //   {
+    //     test: /\.(jpe?g|png|gif|svg)$/i,
+    //     loader: 'file-loader',
+    //     options: {
+    //       name: 'public/[name].[ext]'
+    //     }
+    // }
     ]
   }
 }
