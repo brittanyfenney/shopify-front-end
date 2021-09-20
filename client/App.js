@@ -19,6 +19,7 @@ export const App = () => {
 
   useEffect(() => {
     getPhotos()
+    console.log(photos)
   }, [])
 
   return (
@@ -27,9 +28,15 @@ export const App = () => {
       <div className="image-container">
         {photos && photos.length ? photos.map(photo => {
           return (
-            <a href={photo.url} key={photo.title}>
+            <div key={photo.title}>
+            <a href={photo.url} >
             <img src={photo.url} />
             </a>
+            <p>Title: {photo.title}</p>
+            <p>Date: {photo.date}</p>
+            <button>Like</button>
+
+            </div>
 
           )
 
