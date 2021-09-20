@@ -65,7 +65,7 @@ export const App = () => {
   // }, [isFetching])
 
   return (
-    <div>
+    <div id="main">
       <h1>Spacestagram</h1>
       {/* <div className="image-container">
         {photos && photos.length

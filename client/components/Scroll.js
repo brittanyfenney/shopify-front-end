@@ -4,7 +4,7 @@ import { apiKey } from "../../secrets";
 
 export const Scroll = () => {
   const [photos, setPhotos] = useState([]);
-  const [isFetching, setIsFetching] = useState([]);
+  const [isFetching, setIsFetching] = useState(false);
 
   const apiUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=10`;
 
@@ -63,6 +63,7 @@ export const Scroll = () => {
       setIsFetching(false)
     }
   }, [isFetching])
+
 
   return (
       <div className="image-container">

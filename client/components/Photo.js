@@ -9,15 +9,18 @@ export const Photo = (props) => {
   }
 
   return (
-    <div key={photo.url}>
+    <div className="image" key={photo.url}>
       <a href={photo.url}>
         <img src={photo.url} width="300" height="auto" />
       </a>
-      <p>Title: {photo.title}</p>
-      <p>Date: {photo.date}</p>
-      <button id={photo.url} onClick={likeUnlike}>
-        {liked ? "Unlike" : "Like"}
-      </button>
+      <div className="photo-info">
+        <h2>
+          {photo.title} ({photo.date})
+        </h2>
+        <button id={photo.url} onClick={likeUnlike}>
+          {liked ? "Unlike" : "Like"}
+        </button>
+      </div>
     </div>
   );
 };
