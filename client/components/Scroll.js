@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Photo } from "./Photo";
-// import { apiKey } from "../../secrets";
 
 export const Scroll = () => {
   const [photos, setPhotos] = useState([]);
