@@ -1,5 +1,5 @@
 {
-  "name": "books",
+  "name": "spacestagram",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -27,18 +27,18 @@
   },
   "scripts": {
     "web": "webpack",
-    "build": "webpack -w",
+    "dev": "webpack -w",
     "start": "webpack serve",
-    "start-dev": "npm run build & npm run start"
+    "start-dev": "npm run dev & npm run start"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brittanyfenney/books.git"
+    "url": "git+https://github.com/brittanyfenney/shopify-front-end.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/brittanyfenney/books/issues"
+    "url": "https://github.com/brittanyfenney/shopify-front-end/issues"
   },
-  "homepage": "https://github.com/brittanyfenney/books#readme"
+  "homepage": "https://github.com/brittanyfenney/shopify-front-end#readme"
 }

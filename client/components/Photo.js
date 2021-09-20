@@ -8,14 +8,16 @@ export const Photo = (props) => {
     setLiked(!liked);
   }
 
+  console.log(photo.explanation)
+
   return (
     <div className="image" key={photo.url}>
-      <a href={photo.url}>
-        <img src={photo.url} width="300" height="auto" />
-      </a>
+
+        <img src={photo.url} alt={photo.explanation}/>
+
       <div className="photo-info">
         <h2>
-          {photo.title} ({photo.date})
+        <a href={photo.url}>{photo.title}</a> ({photo.date})
         </h2>
         <button id={photo.url} onClick={likeUnlike}>
           {liked ? "Unlike" : "Like"}
