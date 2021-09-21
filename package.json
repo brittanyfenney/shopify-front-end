@@ -28,7 +28,8 @@
   "scripts": {
     "web": "webpack",
     "dev": "webpack -w",
-    "start": "node ./bundle.js",
+    "deploy": "script/deploy",
+    "start": "node ./public/bundle.js",
     "serve": "webpack serve",
     "start-dev": "npm run dev & npm run serve"
   },
