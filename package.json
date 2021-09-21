@@ -42,7 +42,7 @@
   "bugs": {
     "url": "https://github.com/brittanyfenney/shopify-front-end/issues"
   },
-  "homepage": "https://github.com/brittanyfenney/shopify-front-end#readme",
+  "homepage": ".",
   "engines": {
     "node": "12.21.0"
   }
